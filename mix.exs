@@ -4,7 +4,7 @@ defmodule YAML.MixProject do
   @app :yaml
   @name "YAML"
   @version "0.1.0"
-  @github "https://github.com/sheharyarn/#{@app}"
+  @github "https://github.com/sruplex/#{@app}"
   @author "Sheharyar Naseer"
   @license "MIT"
 
