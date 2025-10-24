@@ -16,5 +16,4 @@ defmodule YAML do
       error = YAML.ParsingError.build_error(error)
       reraise(error, __STACKTRACE__)
   end
-
 end

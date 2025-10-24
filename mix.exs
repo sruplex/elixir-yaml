@@ -1,13 +1,12 @@
 defmodule YAML.MixProject do
   use Mix.Project
 
-  @app     :yaml
-  @name    "YAML"
+  @app :yaml
+  @name "YAML"
   @version "0.1.0"
-  @github  "https://github.com/sheharyarn/#{@app}"
-  @author  "Sheharyar Naseer"
+  @github "https://github.com/sruplex/#{@app}"
+  @author "Sheharyar Naseer"
   @license "MIT"
-
 
   # NOTE:
   # To publish package or update docs, use the `docs`
@@ -17,56 +16,50 @@ defmodule YAML.MixProject do
   #   MIX_ENV=docs hex.publish
   #
 
-
   def project do
     [
       # Project
-      app:           @app,
-      version:       @version,
-      elixir:        "~> 1.6",
-      description:   description(),
-      package:       package(),
-      deps:          deps(),
-      elixirc_paths: elixirc_paths(Mix.env),
+      app: @app,
+      version: @version,
+      elixir: "~> 1.14",
+      description: description(),
+      package: package(),
+      deps: deps(),
+      elixirc_paths: elixirc_paths(Mix.env()),
 
       # ExDoc
-      name:         @name,
-      source_url:   @github,
+      name: @name,
+      source_url: @github,
       homepage_url: @github,
       docs: [
-        main:       @name,
-        canonical:  "https://hexdocs.pm/#{@app}",
-        extras:     ["README.md"]
+        main: @name,
+        canonical: "https://hexdocs.pm/#{@app}",
+        extras: ["README.md"]
       ]
     ]
   end
-
 
   # BEAM Application
   def application do
     [extra_applications: [:logger]]
   end
 
-
   # Dependencies
   defp deps do
     [
-      {:yamerl,  "~> 0.7.0"},
-      {:ex_doc,  ">= 0.0.0", only: :docs},
-      {:inch_ex, ">= 0.0.0", only: :docs},
+      {:yamerl, "~> 0.10.0"},
+      {:ex_doc, ">= 0.0.0", only: :docs},
+      {:inch_ex, ">= 0.0.0", only: :docs}
     ]
   end
 
-
   # Compilation Paths
-  defp elixirc_paths(_env),  do: ["lib"]
-
+  defp elixirc_paths(_env), do: ["lib"]
 
   # Package Description
   defp description do
     "YAML Parsing and Encoding in Elixir"
   end
-
 
   # Package Information
   defp package do
