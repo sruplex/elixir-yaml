@@ -5,8 +5,6 @@ defmodule YAML.MixProject do
   @name "YAML"
   @version "0.2.0"
   @github "https://github.com/sruplex/#{@app}"
-  @author "Sheharyar Naseer"
-  @license "MIT"
 
   # NOTE:
   # To publish package or update docs, use the `docs`
@@ -54,9 +52,7 @@ defmodule YAML.MixProject do
   end
 
   # Compilation Paths
-  defp elixirc_paths(:test),
-    do: ["lib", "test/support"]
-
+  defp elixirc_paths(:test), do: ["lib", "test/support"]
   defp elixirc_paths(_env), do: ["lib"]
 
   # Package Description
@@ -68,10 +64,10 @@ defmodule YAML.MixProject do
   defp package do
     [
       name: @app,
-      maintainers: [@author],
-      licenses: [@license],
+      maintainers: ["Sruplex", "Sheharyar Naseer"],
+      licenses: ["MIT"],
       files: ~w(mix.exs lib README.md),
-      links: %{"Github" => @github}
+      links: %{"GitHub" => @github}
     ]
   end
 end
