@@ -3,7 +3,7 @@ defmodule YAML.MixProject do
 
   @app :yaml
   @name "YAML"
-  @version "0.1.0"
+  @version "0.2.0"
   @github "https://github.com/sruplex/#{@app}"
   @author "Sheharyar Naseer"
   @license "MIT"
@@ -13,7 +13,7 @@ defmodule YAML.MixProject do
   # mix environment to not include support modules
   # that are normally included in the `dev` environment
   #
-  #   MIX_ENV=docs hex.publish
+  #   MIX_ENV=docs mix hex.publish
   #
 
   def project do
